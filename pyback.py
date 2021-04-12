@@ -44,6 +44,8 @@ class PyBack:
         print('well! internet connection available')
 
         self.website = self.website.format(website=link)
+
+        print(self.website)
         self.website_data = get(self.website).text
 
         if len(self.website_data) > 0:
@@ -72,6 +74,8 @@ class PyBack:
                     self.is_generated = True
 
                 break
+
+            continue
 
         if self.is_generated:
             print('yes! -> ', self.generated + '%2f')
